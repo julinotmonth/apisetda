@@ -1,18 +1,8 @@
-import { Sequelize } from "sequelize";
-import dotenv from "dotenv";
+import {Sequelize} from "sequelize";
 
-dotenv.config();
-
-const db = new Sequelize(
-    process.env.DB_NAME, // Nama database
-    process.env.DB_USER, // Username database
-    process.env.DB_PASSWORD, // Password database
-    {
-        host: process.env.DB_HOST,
-        dialect: process.env.DB_DIALECT || "mysql",
-        port: process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 3306,
-        logging: false, // Matikan logging jika tidak diperlukan
-    }
-);
+const db = new Sequelize('bhhobmavjrngkbkydgl6','u9h0ifiima73m3tt','YcGhnWsrUYUfsPfvmboe',{
+    host: 'bhhobmavjrngkbkydgl6-mysql.services.clever-cloud.com',
+    dialect: 'mysql'
+});
 
 export default db;
